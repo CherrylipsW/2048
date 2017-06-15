@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1 maximum-scale=1 minimum-scale=1">
+	<title>2048</title>
+	<link rel="stylesheet" href="style/main.css">
+	<link rel="stylesheet" href="style/media.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header-container">
+			<div class="title">
+				<h1>2048</h1>
+			</div>
+			<div class="score-container">
+				<span class="score" id="current-score">0</span>
+				<span class="score" id="best-score">0</span>
+			</div>
+		</div>
+		<div class="info-container">
+			<p class="game-intro">Join the numbers and get to the <strong>2048 tile</strong>!</p>
+			<span class="new-game">New Game</span>
+		</div>
+		<div class="game-container">
+			<div class="row-grid-container">
+				<div class="grid-cell"></div>
+				<div class="grid-cell"></div>
+				<div class="grid-cell"></div>
+				<div class="grid-cell"></div>
+			</div>
+			<div class="row-grid-container">
+				<div class="grid-cell"></div>
+				<div class="grid-cell"></div>
+				<div class="grid-cell"></div>
+				<div class="grid-cell"></div>
+			</div>
+			<div class="row-grid-container">
+				<div class="grid-cell"></div>
+				<div class="grid-cell"></div>
+				<div class="grid-cell"></div>
+				<div class="grid-cell"></div>
+			</div>
+			<div class="row-grid-container">
+				<div class="grid-cell"></div>
+				<div class="grid-cell"></div>
+				<div class="grid-cell"></div>
+				<div class="grid-cell"></div>
+			</div>
+
+			<div class="game-over"></div>
+		</div>
+	</div>
+
+	<script src="js/jquery-3.1.0.min.js"></script>
+
+	<script src="js/func.js"></script>
+	<script src="js/init.js"></script>
+</body>
+</html>
