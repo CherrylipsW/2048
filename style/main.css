@@ -1,0 +1,134 @@
+body,div,p,span,h1{
+	margin:0;
+	padding:0;
+}
+
+.container{
+	width: 40%;
+	margin:0 auto;
+}
+.header-container{
+	width: 100%;
+	overflow: hidden;
+}
+.title{
+	float: left;
+	width: 40%;
+}
+.title h1{
+	width: 100%;
+	font-size: 80px;
+	color: #8e8e8e;
+	text-align: left;
+}
+
+.score-container{
+	float: right;
+	width: 60%;
+	text-align: right;
+}
+.score{
+	position: relative;
+	display: inline-block;
+	padding: 15px 25px;
+	font-size: 25px;
+	height: 25px;
+	line-height: 47px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #BBAD9E;
+	border-radius: 5px;
+	margin-top: 26px;
+	margin-bottom: 25px;
+	text-align: center;
+}
+.score:after{
+	position: absolute;
+	width: 100%;
+	top: 10px;
+	left: 0px;
+	font-size: 12px;
+	line-height: 13px;
+	//font-weight: normal;
+	color: #EEE4D9;
+	text-align: center;
+	text-transform: uppercase;
+}
+#current-score:after{
+	content: "score";
+}
+#best-score:after{
+	content: "best";
+}
+
+.info-container{
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+}
+.game-intro{
+	float: left;
+	width: 65%;
+	text-align: left;
+	color: #8e8e8e;
+	font-size: 17px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.new-game{
+	float: right;
+	text-align: center;
+	background-color: #8F7A66;
+	border-radius: 3px;
+	padding: 15px;
+	color: #ffffff;
+	font-size: 17px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.game-container{
+	width: 520px;
+	height: 520px;
+	margin:20px auto;
+	background-color: #BBAD9E;
+	border-radius: 3px;
+	overflow: hidden;
+	position: relative;
+}
+
+.row-grid-container{
+	width: 100%;
+	height: 105px;
+	margin-top:20px;
+}
+.grid-cell{
+	float: left;
+	width: 105px;
+	height: 105px;
+	margin-left: 20px;
+	background-color: #CDC1B4;
+	border-radius: 3px;
+}
+
+.number-cell{
+	position: absolute;
+	text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+	line-height: 105px;
+	border-radius: 3px;
+}
+
+.game-over{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,200,115,0.5);
+	color: #ffffff;
+	font-size: 55px;
+	font-weight: bold;
+	text-align: center;
+	position: absolute;
+	top:520px;
+	left:0;
+}

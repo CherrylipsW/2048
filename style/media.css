@@ -1,0 +1,104 @@
+@media (max-width: 500px) and (min-height: 375px){
+
+.container{
+	width: 79%;
+}
+.title{
+	width: 40%;
+}
+
+.title h1{
+	font-size: 40px;
+}
+
+.score-container{
+	width: 60%;
+}
+.score{
+	padding: 10px 12px;
+	font-size: 15px;
+	height: 18px;
+	line-height: 30px;
+	border-radius: 3px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.score:after{
+	top: 7px;
+	left: 0px;
+	font-size: 9px;
+	line-height: 8px;
+	font-weight: normal;
+	text-transform: lowercase;
+}
+
+.game-intro{
+	width: 70%;
+	font-size: 10px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+.new-game{
+	padding: 8px 5px;
+	font-size: 10px;
+}
+
+.game-container{
+	width: 294px;
+	height: 294px;
+	margin:10px auto;
+}
+
+.row-grid-container{
+	height: 66px;
+	margin-top:6px;
+}
+.grid-cell{
+	width: 66px;
+	height: 66px;
+	margin-left: 6px;
+}
+
+.number-cell{
+	font-size: 30px;
+	line-height: 67px;
+}
+
+.game-over{
+	font-size: 30px;
+	top:66px;
+}
+}
+
+@media (max-width: 320px){
+
+.container{
+	width: 80%;
+}
+
+.game-container{
+	width: 253px;
+	height: 253px;
+	margin:10px auto;
+}
+
+.row-grid-container{
+	height: 57px;
+	margin-top:5px;
+}
+.grid-cell{
+	width: 57px;
+	height: 57px;
+	margin-left: 5px;
+}
+
+.number-cell{
+	font-size: 30px;
+	line-height: 57px;
+}
+
+.game-over{
+	font-size: 30px;
+	top:57px;
+}
+}
