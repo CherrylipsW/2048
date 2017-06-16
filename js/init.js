@@ -3,8 +3,10 @@ var score = 0;
 var bestScore = 0;
 
 (function(){
-	score = parseInt(localStorage.score);
-	bestScore = parseInt(localStorage.bestScore);
+	if(localStorage.score){
+		score = parseInt(localStorage.score);
+		bestScore = parseInt(localStorage.bestScore);
+	}
 	
 	newGame();
 })();
