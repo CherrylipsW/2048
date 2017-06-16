@@ -35,7 +35,6 @@ function init(){
 			updateBoard();
 			return board;
 		}
-		score = 0;
 	}
 
 	var row = $(".row-grid-container");
