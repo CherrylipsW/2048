@@ -5,17 +5,12 @@ var bestScore = 0;
 (function(){
 	score = parseInt(localStorage.score);
 	bestScore = parseInt(localStorage.bestScore);
-
-	debugger
-	newGame(isNew(strToDbarr(localStorage.board)) || ifGameOver(strToDbarr(localStorage.board)));
+	
+	newGame();
 })();
 
-function newGame(newG){
-
-	
-
-	//刚开始要随机生成两个数字才能开始游戏
-	if(newG){
+function newGame(){
+	/*if(newG){
 		init();
 		getANumber(200,board);
 		getANumber(200,board);
@@ -23,18 +18,23 @@ function newGame(newG){
 	}else{
 		board = strToDbarr(localStorage.board);
 		updateBoard();
-	}
+	}*/
+	init();
 
 	$(".game-over").css({"top":$(".game-container").height()});
-
-	$("#current-score").text(score);
- 	
- 	$("#best-score").text(bestScore);
 
 }
 
 function init(){
 	//初始化board
+	if(localStorage.board && score!=0){
+		if(!ifGameOver(strToDbarr(localStorage.board))){
+			board = strToDbarr(localStorage.board);
+			updateBoard();
+			return board;
+		}
+	}
+
 	var row = $(".row-grid-container");
 	for(var i=0;i<row.length;i++){
 		var col = row.eq(i).children(".grid-cell");
@@ -43,11 +43,15 @@ function init(){
 			board[i][j] = 0;
 		}
 	}
+	
+	//刚开始要随机生成两个数字才能开始游戏
+	getANumber(200,board);
+	getANumber(200,board);
 
 
 	//当有操作时，更新board数组数据，并显示
 	updateBoard();
-
+	return board;
 }
 
 function updateBoard(){
@@ -94,6 +98,8 @@ function updateBoard(){
 		$("#best-score").text(score);
 		bestScore = score;
 	};
+ 	
+ 	$("#best-score").text(bestScore);
 
 	storage();
 }
@@ -269,8 +275,6 @@ function storage(){
 		storage.score = $("#current-score").text();
 		storage.bestScore = $("#best-score").text();
 		storage.board = board;
-
-		console.log(storage.score + " " + storage.bestScore);
 			
 	}else{
 		alert("Your broswer doesn't support localstorage!");
