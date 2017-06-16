@@ -148,6 +148,43 @@ $(document).keydown(function(ev) {
 	}
 });
 
+$(document).swipe({
+	swipe:function (event,direction,distance,duration, fingerCount){
+		switch(direction){
+			case "left":
+					if(canMoveLeft(board)){
+						moveLeft();
+						getANumber(1000,board);
+						storage();
+						isGameOver(board);
+					};
+					break;
+			case "up":if(canMoveUp(board)){
+						moveUp();
+						getANumber(1000,board);
+						storage();
+						isGameOver(board);
+					};
+					break;
+			case "right":
+					if(canMoveRight(board)){
+						moveRight();
+						getANumber(1000,board);
+						storage();
+						isGameOver(board);
+					};
+					break;
+			case "down":
+					if(canMoveDown(board)){
+						moveDown();
+						getANumber(1000,board);
+						storage();
+						isGameOver(board);
+					};
+					break;
+		}
+	}
+});
 
 function moveLeft(){
 	//避免按一下键造成整排或者整列的一次性添加
